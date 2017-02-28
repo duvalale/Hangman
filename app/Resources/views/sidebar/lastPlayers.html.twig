@@ -1,0 +1,6 @@
+<h3>Last players</h3>
+<ul>
+    {% for p in players %}
+        <li {% if loop.first %} class="first" {% elseif loop.last %} class="last" {% endif %}>user {{ p }}</li>
+    {% endfor %}
+</ul>

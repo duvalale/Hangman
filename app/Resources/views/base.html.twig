@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Hangman Game - {% block title %}You're hanged! {% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}"/>
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <div id="logo">
+            <h1>
+                <a href="{{ url('home') }}">Hangman</a>
+            </h1>
+        </div>
+        <div id="menu">
+            <ul>
+                <li class="first current_page_item">
+                    <a href="{{ url('game') }}">Game</a>
+                </li>
+                <li>
+                    <a href="{{ url('home') }}">Register</a>
+                </li>
+                <li>
+                    <a href="{{ url('home') }}">Login</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+            <br class="clearfix" />
+        </div>
+    </div>
+
+    <div id="page">
+        <div id="content">
+            {% block content %} {% endblock %}
+        </div>
+        <div id="sidebar">
+            {{ render(controller('AppBundle:Sidebar:lastGames', {max: 4})) }}
+            {{ render(controller('AppBundle:Sidebar:lastPlayers', {max: 5})) }}
+        </div>
+        <br class="clearfix" />
+    </div>
+</div>
+</body>
+</html>
