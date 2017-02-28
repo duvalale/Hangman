@@ -6,7 +6,10 @@
     <h2>Guess the mysterious word</h2>
 
     <p class="attempts">
-        You still have 11 remaining attempts.
+        {% set attempts = app.request.query.get('attempts', 11) %}
+        {% transchoice attempts %}
+        nbAttempsRemaining
+        {% endtranschoice %}
     </p>
 
     <ul class="word_letters">
