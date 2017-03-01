@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ 'Contact' | trans }} {% endblock %}
+
+
+{% block content %}
+    {{ form_start(formContact) }}
+    {{ form_widget(formContact) }}
+    {{ form_end(formContact) }}
+{% endblock %}

@@ -1,0 +1,14 @@
+<h3>Contact done</h3>
+
+Hi {{ name }}! We have received your message, thanks for contacting us. :)
+
+
+FYI, your message was : <br>
+{{ message }}
+
+To login, go to: <a href="{{ url('home') }}">...</a>.
+
+Thanks!
+
+{# Makes an absolute URL to the /images/logo.png file #}
+<img src="{{ absolute_url(asset('images/logo.png')) }}">
