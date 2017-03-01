@@ -35,4 +35,11 @@ class DefaultController extends Controller
     public function failedAction() {
         return $this->render('default/failed.html.twig');
     }
+
+    /**
+     * @Route("/_error/404", name="404")
+     */
+    public function error404Action() {
+        return $this->render('Exception/error404.html.twig');
+    }
 }

@@ -2,7 +2,7 @@ Game: Jouer
 Register: S'enregistrer
 Login: Se connecter
 Contact: Contactez-nous
-nbAttempsRemaining : "{0} Game Over\n
-            | {1} c'est limite ! \n
-            | ]1, 5] Attention ... \n
-            | [6, +Inf] Eaaaasy t'es large\n"
+nbAttempsRemaining : "{0} Game Over
+            | {1} c'est limite !
+            | ]1, 5] Attention ... plus que %count% coups
+            | [6, +Inf] Eaaaasy t'es large"
